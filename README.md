@@ -33,3 +33,12 @@ Built using **Express.js**, **AJV** (Another JSON Validator), **EJS** templates,
    ```bash
    git clone https://github.com/<your-username>/ocpi-json-schema-validator.git
    cd ocpi-json-schema-validator
+
+2. **Install dependencies**
+   ```bash
+   npm install
+
+3. **Run the application**
+   ```bash
+   npm start
+
