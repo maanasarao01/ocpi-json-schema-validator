@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "start_date_time": {
+      "$ref": "timestamp#"
+    },
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+          	"$ref": "cdr_dimension_type"
+          },
+          "volume": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "type",
+          "volume"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "tariff_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "start_date_time",
+    "dimensions"
+  ],
+  "additionalProperties": false
+}

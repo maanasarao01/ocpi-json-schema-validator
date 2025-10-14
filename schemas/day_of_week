@@ -1,0 +1,13 @@
+                            {
+                                "type": "string",
+                                "javaType": "java.time.DayOfWeek",
+                                "enum": [
+                                    "MONDAY",
+                                    "TUESDAY",
+                                    "WEDNESDAY",
+                                    "THURSDAY",
+                                    "FRIDAY",
+                                    "SATURDAY",
+                                    "SUNDAY"
+                                ]
+                            }

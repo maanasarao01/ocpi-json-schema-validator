@@ -1,0 +1,18 @@
+{
+  "name": "ocpi-schema-vaidator",
+  "version": "1.0.0",
+  "description": "validates json objects against ocpi 2.2.1 schemas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "index": "npm start"
+  },
+  "author": "maanasarao",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

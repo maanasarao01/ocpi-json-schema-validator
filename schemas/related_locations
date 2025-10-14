@@ -1,0 +1,18 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "latitude": {
+        "$ref": "latitude#"
+      },
+      "longitude": {
+        "$ref": "longitude#"
+      },
+      "name": {
+        "$ref": "display_text#"
+      }
+    }
+  },
+  "minItems": 0
+}

@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "type": "string",
+      "enum": [
+        "cdrs",
+        "commands",
+        "credentials",
+        "locations",
+        "sessions",
+        "tariffs",
+        "tokens",
+		"chargingprofiles"      
+		]
+    },
+    "role": {
+    	"$ref": "interface_role"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "require": [
+    "identifier",
+    "role",
+    "url"
+  ],
+  "additionalProperties": false
+}

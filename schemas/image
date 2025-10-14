@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "thumbnail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri-reference"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "CHARGER",
+        "ENTRANCE",
+        "LOCATION",
+        "NETWORK",
+        "OPERATOR",
+        "OTHER",
+        "OWNER"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4
+    },
+    "width": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 5
+    },
+    "height": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 5
+    }
+  },
+  "required": [
+    "url",
+    "category",
+    "type"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OCPI JSON Validator</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 OCPI JSON Validator</h1>
+
+    <form action="/validate" method="POST">
+      <label for="schema">Select Schema:</label>
+      <select name="schema" id="schema" required>
+        <% schemas.forEach(schema => { %>
+          <option value="<%= schema %>"><%= schema %></option>
+        <% }); %>
+      </select>
+
+      <label for="jsonInput">Paste JSON:</label>
+      <textarea name="jsonInput" id="jsonInput" rows="15" placeholder="Paste your JSON here..." required></textarea>
+
+      <button type="submit">Validate</button>
+    </form>
+
+ <% if (result) { %>
+  <div class="result <%= result.valid ? 'success' : 'error' %>">
+    <% if (result.valid) { %>
+      ✅ JSON is good to go!
+    <% } else { %>
+      ❌ Validation failed:
+      <ul>
+        <% result.errors.forEach(err => { %>
+          <% if (err.keyword === 'required') { %>
+            <li>
+              🚫 Missing required parameters:
+              <strong><%= Array.isArray(err.params.missingProperty) 
+                ? err.params.missingProperty.join(', ') 
+                : (err.params.missingProperty || (err.params.required || []).join(', ')) %></strong>
+            </li>
+          <% } else if (err.keyword === 'additionalProperties') { %>
+            <li>
+              ⚠️ Parameters additional to the OCPI spec are not allowed:
+              <strong>
+                <%= err.params.additionalProperty 
+                  ? err.params.additionalProperty 
+                  : (Array.isArray(err.params.additionalProperties)
+                      ? err.params.additionalProperties.join(', ')
+                      : '') %>
+              </strong>
+            </li>
+          <% } else { %>
+            <li>
+              📍 <%= err.schemaPath %>: <%= err.message %>
+            </li>
+          <% } %>
+        <% }); %>
+      </ul>
+    <% } %>
+  </div>
+<% } %>
+  </div>
+</body>
+</html>

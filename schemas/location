@@ -1,0 +1,174 @@
+{
+  "type": "object",
+  "javaInterfaces" : [
+    "com.llocer.ev.ocpi.msgs.HasLastUpdated"
+  ],
+  "properties": {
+    "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 39
+    },
+    "publish": {
+      "type": "boolean"
+    },
+    "publish_allowed_to": {
+      "type": "array",
+      "items": {
+        "$ref": "publish_token"
+      }
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "address": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 45
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 45
+    },
+    "postal_code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "country": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "coordinates": {
+      "$ref": "geo_location#"
+    },
+    "related_locations": {
+      "$ref": "related_locations#"
+    },
+    "parking_type":{
+      "$ref": "parking_type#"
+    },
+    "evses": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "evse#"
+      }
+    },
+    "directions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "display_text#"
+      }
+    },
+    "operator": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "business_details#"
+        }
+      ]
+    },
+    "suboperator": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "business_details#"
+        }
+      ]
+    },
+    "owner": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "business_details#"
+        }
+      ]
+    },
+    "facilities": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+          "$ref": "facility#"
+      }
+    },
+    "time_zone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "opening_times": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "hours#"
+        }
+      ]
+    },
+    "charging_when_closed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "images": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "image#"
+      }
+    },
+    "energy_mix": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "energy_mix#"
+        }
+      ]
+    },
+    "last_updated": {
+      "$ref": "timestamp#"
+    }
+  },
+  "additionalProperties": false
+}

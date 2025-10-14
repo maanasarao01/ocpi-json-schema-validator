@@ -1,0 +1,94 @@
+{
+  "type": "object",
+   "javaInterfaces" : [
+    "com.llocer.ev.ocpi.msgs.HasLastUpdated"
+  ],
+  "properties": {
+      "country_code": {
+    	"$ref": "country_code"
+    },
+    "party_id": {
+    	"$ref": "party_id"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "start_date_time": {
+		"$ref": "timestamp#"
+    },
+    "end_date_time": {
+		"$ref": "timestamp#"
+    },
+    "kwh": {
+      "type": "number"
+    },
+    "cdr_token": {
+		"$ref": "cdr_token"
+    },
+    "auth_method": {
+      "type": "string",
+	  "$ref": "auth_method"
+    },
+    "authorization_reference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "location_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "evse_uid": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "connector_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36
+    },
+    "meter_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "currency": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "charging_periods": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "charging_period#"
+      }
+    },
+    "total_cost": {
+      "$ref":"price#"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "COMPLETED",
+        "INVALID",
+        "PENDING",
+        "RESERVATION"
+      ]
+    },
+    "last_updated": {
+      "$ref": "timestamp#"
+    }
+  },
+  "additionalProperties": false
+}

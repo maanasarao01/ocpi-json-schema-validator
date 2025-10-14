@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+       "$ref": "location#/properties/id"
+    },
+    "name": {
+      "$ref": "location#/properties/name"
+    },
+    "address": {
+       "$ref": "location#/properties/address"
+    },
+    "city": {
+      "$ref": "location#/properties/city"
+    },
+    "postal_code": {
+     "$ref": "location#/properties/postal_code"
+    },
+    "state": {
+       "$ref": "location#/properties/state"
+    },
+    "country": {
+       "$ref": "location#/properties/country"
+    },
+    "coordinates": {
+      "$ref": "geo_location#"
+    },
+    "evse_uid":{
+          "$ref": "evse#/properties/uid"
+    },
+    "evse_id":{
+          "$ref": "evse#/properties/evse_id"
+    },
+    "connector_id":{
+       "$ref": "connector#/properties/id"
+    },
+    "connector_standard":{
+      "$ref": "connector#/properties/standard"
+    },
+    "connector_format":{
+      "$ref": "connector#/properties/format"
+    },
+    "connector_power_type":{
+      "$ref": "connector#/properties/power_type"
+    }
+  },
+  "additionalProperties": false
+}
