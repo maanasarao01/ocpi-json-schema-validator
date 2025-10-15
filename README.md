@@ -3,6 +3,8 @@
 A lightweight **Node.js web application** for validating **OCPI 2.2.1 JSON messages** against their official schema definitions.  
 Built using **Express.js**, **AJV** (Another JSON Validator), **EJS** templates, and **CSS** for a simple, interactive frontend.
 
+[![Deploy on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://ocpi-json-schema-validator.vercel.app/)
+
 ---
 
 ## 🚀 Features
