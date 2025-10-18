@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ocpi-json-schema-validator.vercel.app/sitemap.xml
