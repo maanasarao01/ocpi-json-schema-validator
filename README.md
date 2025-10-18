@@ -9,7 +9,7 @@ Built using **Express.js**, **AJV** (Another JSON Validator), **EJS** templates,
 
 ## 🚀 Features
 
-- 🔍 Validate OCPI 2.2.1 JSON messages against official schema definitions  
+- 🔍 Validate [OCPI 2.2.1](https://evroaming.org/wp-content/uploads/2024/11/OCPI-2.2.1-d2.pdf) JSON messages against official schema definitions  
 - 🧩 Uses **AJV** for fast and reliable schema validation  
 - 🖥️ Interactive web UI built with **EJS** and **CSS**  
 - 🌐 API endpoint for programmatic validation  
